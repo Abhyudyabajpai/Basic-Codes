@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,19 +10,21 @@ int main() {
     int outofguesses =0;
     int guess;
     
-    while(guess!=secret_num && outofguesses==0){
+    while(guess!= secret_num && outofguesses==0){
         if(guessCount<guessLimit){
             printf("Guess the number: ");
             scanf("%d",&guess);
             guessCount++;
         }
-        else outofguesses ==1;
+        else {
+            outofguesses ==1;
+        }
     }
         
-        if(outofguesses==1){
+    if(outofguesses==1){
         printf("you lost!");
-        }
-        else{
+    }
+    else{
         printf("you win!");
         }
 	return 0;
